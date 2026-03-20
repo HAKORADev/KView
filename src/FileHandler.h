@@ -66,4 +66,4 @@ private:
     void updateDirList();
 };
 
-#endif // FILEHANDLER_H
+#endif
