@@ -88,7 +88,7 @@ Running `./kview` without arguments sets up:
 | **OS** | Linux with KDE Plasma |
 | **Qt** | 6.6.0 or higher |
 | **KF6** | KDE Frameworks 6.0+ |
-| **Display** | X11 or Wayland |
+| **Display** | Wayland |
 
 ---
 
