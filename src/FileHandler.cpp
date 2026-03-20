@@ -38,7 +38,6 @@ void FileHandler::updateDirList() {
     QFileInfo info(m_filePath);
     QDir dir = info.dir();
     QStringList filters;
-    // We can filter for only files to avoid directories
     m_dirFiles = dir.entryList(QDir::Files, QDir::Name | QDir::IgnoreCase);
     
     m_currentIndex = m_dirFiles.indexOf(m_fileName);
