@@ -6,6 +6,15 @@
 
 ---
 
+## Why You May Use This
+
+1. **You lost your memory** and want to refresh your brain to know what files are here instantly
+2. **You just want to preview file contents** for no reason
+3. **You may use it for the same reason macOS users use Quick Look** (even though current Quick Look is a bloated app rather than just viewing the file)
+4. **You love to use unmalicious software** from the internet
+
+---
+
 ## What is KView?
 
 **KView** = **K** (KDE) + **View** (Preview)
