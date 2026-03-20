@@ -22,10 +22,8 @@ void setupKView() {
     QString serviceMenuDir = QDir::homePath() + "/.local/share/kio/servicemenus";
     QString serviceMenuPath = serviceMenuDir + "/kview.desktop";
 
-    // Create service menu directory if it doesn't exist
     QDir().mkpath(serviceMenuDir);
 
-    // 1. Create .desktop file (for the application menu)
     QFile desktopFile(desktopPath);
     if (desktopFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&desktopFile);
@@ -42,7 +40,6 @@ void setupKView() {
         QFile::setPermissions(desktopPath, QFile::Permission(0x777));
     }
 
-    // 2. Create Service Menu (Right-click in Dolphin)
     QFile serviceFile(serviceMenuPath);
     if (serviceFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&serviceFile);
@@ -60,7 +57,6 @@ void setupKView() {
         QFile::setPermissions(serviceMenuPath, QFile::Permissions(QFileDevice::ReadOwner | QFileDevice::WriteOwner | QFileDevice::ExeOwner | QFileDevice::ReadGroup | QFileDevice::ExeGroup | QFileDevice::ReadOther | QFileDevice::ExeOther));
     }
 
-    // Refresh KDE database
     QProcess::execute("kbuildsycoca6", {});
 
     std::cout << "KView Initialized!\n";
@@ -107,7 +103,7 @@ void setupKView() {
         if (!obj && url == objUrl) {
             QCoreApplication::exit(-1);
         } else {
-            // Force focus
+            
             if (QQuickWindow *window = qobject_cast<QQuickWindow*>(obj)) {
                 window->requestActivate();
             }
